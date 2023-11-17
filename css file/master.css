@@ -1,0 +1,193 @@
+:root {
+    --main-color: #FF9800;
+    --secound-color: #099d8f;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* Start-landing-page */
+.landing-page {
+    background-image: url('../imgs/design-1.jpg');
+    background-size: cover;
+}
+
+.landing-page .overlay {
+    background-color: #0000006e;
+}
+
+.landing-page header .logo {
+    width: fit-content;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.5px #333;
+    position: relative;
+}
+
+.landing-page header .logo::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    -webkit-text-fill-color: var(--main-color);
+    transition: 0.5s;
+    white-space: nowrap;
+    width: 0%;
+    overflow: hidden;
+}
+
+.landing-page header .logo:hover::before {
+    width: 100%;
+}
+
+.landing-page header .links li a {
+    text-decoration: none;
+    color: #fff;
+    transition: .5s;
+}
+
+.landing-page header .links li a:hover,
+.landing-page header .links li a.active {
+    color: var(--main-color);
+}
+
+.landing-page header .links li a.active {
+    font-weight: bold;
+}
+
+.landing-page header .toggle div:nth-child(2) {
+    width: 50%;
+}
+
+.landing-page header .navbar-toggler {
+    background-color: var(--main-color);
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.landing-page header .navbar-toggler.active {
+    box-shadow: 0 2px 4px 2px var(--secound-color);
+    transform: scale(0.9);
+}
+
+.landing-page header .navbar-toggler i {
+    font-size: 40px;
+    line-height: 30px;
+    color: rgba(0, 0, 0, 0.481);
+}
+
+.landing-page header .links-inside {
+    position: absolute;
+    width: 100%;
+    background-color: var(--secound-color);
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    top: 80px;
+    padding: 0;
+    margin: 0 ;
+    transition: .5s;
+}
+
+.landing-page header .links-inside.none {
+    top: -270px;
+}
+
+.landing-page header .links-inside li {
+    padding: 20px 20px;
+    transition: .5s;
+}
+
+.landing-page header .links-inside li:hover {
+    margin-left: 15px;
+}
+
+.landing-page header .links-inside li:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.landing-page header .links-inside li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: .5s;
+}
+
+.landing-page header .links-inside li a:hover,
+.landing-page header .links-inside li a.active {
+    color: var(--main-color);
+}
+
+.landing-page header .links li a.active,
+.landing-page header .links-inside li a.active {
+    font-weight: bold;
+}
+
+.landing-page .introduction-text {
+    transform: translateX(-50%);
+}
+
+.landing-page .introduction-text h1 {
+    width: 0px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: writter-h1 2s 0.5s both;
+}
+
+@keyframes writter-h1 {
+    from {
+        width: 0;
+    }
+    to {
+        width: 580px;
+    }
+}
+
+.landing-page .introduction-text  .p-one {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: writter-p 2s 1.5s both;
+}
+
+@keyframes writter-p {
+    from {
+        width: 0;
+    }
+    to {
+        width: 580px;
+    }
+}
+
+.landing-page .introduction-text  .p-two {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: writter-p-two 2s 2.5s both;
+}
+
+@keyframes writter-p-two {
+    from {
+        width: 0;
+    }
+    to {
+        width: 580px;
+    }
+}
+.landing-page .introduction-text  p:last-child {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: writter-p-three 2s 3.5s both;
+}
+
+@keyframes writter-p-three {
+    from {
+        width: 0;
+    }
+    to {
+        width: 580px;
+    }
+}
